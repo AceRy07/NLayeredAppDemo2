@@ -1,0 +1,46 @@
+﻿using Northwind.DataAccess.Abstract;
+using Northwind.Entities.Concrete;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Northwind.DataAccess.Concrete.EntityFramework
+{
+    public class EfProductDal : EfEntityRepositoryBase<Product,NorthwindContext>,IProductDal
+    {
+        #region 32.2 ile işlemi bitti
+        /*
+        public void Add(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
+        {
+            using (NorthwindContext context = new NorthwindContext())
+            {
+                return context.Products.ToList();
+            }
+        }
+
+        public Product GetId(Expression<Func<Product, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Product product)
+        {
+            throw new NotImplementedException();
+        }
+        */
+#endregion
+    }
+}
