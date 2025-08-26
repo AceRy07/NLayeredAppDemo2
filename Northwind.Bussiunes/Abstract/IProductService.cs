@@ -10,6 +10,7 @@ namespace Northwind.Bussiunes.Abstract
     public interface IProductService
     {
         List<Product> GetAll();
+        List<Product> GetProductByPropductName(string productName);
         List<Product> GetProductsByCategory(int categoryId);
     }
 }
