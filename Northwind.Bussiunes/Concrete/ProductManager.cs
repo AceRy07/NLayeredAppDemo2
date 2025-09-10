@@ -19,6 +19,12 @@ namespace Northwind.Bussiunes.Concrete
         {
             _productDal = productDal;
         }
+
+        public void AddProducts(Product product)
+        {
+            _productDal.Add(product);
+        }
+
         public List<Product> GetAll()
         {
             return _productDal.GetAll();
@@ -33,5 +39,6 @@ namespace Northwind.Bussiunes.Concrete
         {
             return _productDal.GetAll(p => p.CategoryId == categoryId);
         }
+
     }
 }
