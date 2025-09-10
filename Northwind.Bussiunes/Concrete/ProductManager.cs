@@ -40,5 +40,9 @@ namespace Northwind.Bussiunes.Concrete
             return _productDal.GetAll(p => p.CategoryId == categoryId);
         }
 
+        public void ProductUpdate(Product product)
+        {
+            _productDal.Update(product);
+        }
     }
 }

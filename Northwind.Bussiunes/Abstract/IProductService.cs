@@ -13,5 +13,6 @@ namespace Northwind.Bussiunes.Abstract
         List<Product> GetAll();
         List<Product> GetProductByPropductName(string productName);
         List<Product> GetProductsByCategory(int categoryId);
+        void ProductUpdate(Product product);
     }
 }
