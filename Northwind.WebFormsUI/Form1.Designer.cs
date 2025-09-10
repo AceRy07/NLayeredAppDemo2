@@ -59,6 +59,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbxProductNameUpdate = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.gbxCategory.SuspendLayout();
             this.gbxProductName.SuspendLayout();
@@ -364,11 +365,22 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Product Name";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(733, 615);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(143, 36);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.Text = "Products Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1529, 734);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxProductName);
@@ -424,6 +436,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbxProductNameUpdate;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 

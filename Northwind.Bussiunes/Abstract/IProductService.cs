@@ -14,5 +14,6 @@ namespace Northwind.Bussiunes.Abstract
         List<Product> GetProductByPropductName(string productName);
         List<Product> GetProductsByCategory(int categoryId);
         void ProductUpdate(Product product);
+        void ProrductDelete(Product product);
     }
 }
