@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using Northwind.Bussiunes.Abstract;
+using Northwind.Bussiunes.Utilities;
 using Northwind.Bussiunes.ValidationRules.FluentValidation;
 using Northwind.DataAccess.Abstract;
 using Northwind.DataAccess.Concrete.EntityFramework;
@@ -26,12 +27,7 @@ namespace Northwind.Bussiunes.Concrete
 
         public void AddProducts(Product product)
         {
-            ProductValidator validationRules = new ProductValidator();
-            var result = validationRules.Validate(product);
-            if(result.Errors.Count>0)
-            {
-                throw new ValidationException(result.Errors);
-            }
+            ValidationTool.Validate(new ProductValidator(), product);
             _productDal.Add(product);
         }
 
@@ -52,6 +48,7 @@ namespace Northwind.Bussiunes.Concrete
 
         public void ProductUpdate(Product product)
         {
+            ValidationTool.Validate(new ProductValidator(), product);
             _productDal.Update(product);
         }
 
