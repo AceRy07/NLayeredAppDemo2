@@ -16,7 +16,7 @@ namespace Northwind.Bussiunes.DependencyResolvers.Ninject
         public override void Load()
         {
             // Eğer biri senden IProductService isterse ProductManager sınıfı döndür. Somut bir productManager oluştur.
-            // .InSingletonScope() -> Sadece bir kere üretilir ve uygulama kapanana kadar bellekte kalır.
+            // .InSingletonScope() -> Sadece bir kere new'leme üretir.
             Bind<IProductService>().To<ProductManager>().InSingletonScope();
             Bind<IProductDal>().To<EfProductDal>().InSingletonScope();
 

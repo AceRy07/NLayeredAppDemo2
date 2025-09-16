@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace Northwind.Bussiunes.ValidationRules.FluentValidation
 {
+    // Hangi model için doğrulama yapacaksak onu belirtiriz. Burada Product için yapıyoruz.
+    // AbstractValidator<T> -> Belirtilen tablo için doğrulama yapar.
     public class ProductValidator : AbstractValidator<Product>
     {
         public ProductValidator()
